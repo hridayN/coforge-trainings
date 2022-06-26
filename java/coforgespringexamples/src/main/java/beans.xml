@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="addr" class="coforgespringexamples.Address">
+    <property name="dno" value="100" />
+    <property name="street" value="Cross road" />
+    <property name="city" value="Delhi" />
+  </bean>
+  
+  <bean id="prsn" class="coforgespringexamples.Person">
+    <property name="name" value="Hriday" />
+    <property name="address" ref="addr" />
+  </bean>
+  
+  <bean id="tutr" class="coforgespringexamples.Tutor">
+  	<property name="name" value="Praveen" />
+  	<property name="experience" value="9" />
+  	<property name="languages">
+	  	<list>
+	  		<value>C</value>
+	  		<value>C++</value>
+	  		<value>Java</value>
+	  		<value>C</value>
+	  	</list>
+  	</property>
+  	
+  	<property name="degrees">
+	  	<set>
+	  		<value>B.Tech</value>
+	  		<value>M.Tech</value>
+	  		<value>PhD</value>
+	  	</set>
+  	</property>
+  	<property name="countries">
+	  	<map>
+	  		<entry key="k1" value="India" />
+			<entry key="k2" value="Japan" />
+			<entry key="k3" value="China" />
+			<entry key="k4" value="Russia" />
+	  	</map>
+  	</property>
+  	
+  </bean>
+</beans>
